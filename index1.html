@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نموذج طلب تقييم جاهزية الشركات الصغيرة والمتوسطة للتحول الأخضر</title>
+<style>
+:root{--green:#146b3a;--green2:#1f7a45;--light:#e8f3e6;--soft:#f8fcf7;--border:#c8dbc5;--text:#1f2933;--muted:#617568;--danger:#b42318}
+*{box-sizing:border-box}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;background:linear-gradient(135deg,#f5faf4,#fff);color:var(--text);line-height:1.75}
+.page{max-width:1180px;margin:24px auto;padding:0 16px 42px}
+.hero{background:linear-gradient(135deg,var(--green),#0a4c2a);color:#fff;border-radius:22px;padding:28px 32px;box-shadow:0 18px 45px rgba(20,107,58,.18)}
+.hero h1{margin:0 0 8px;font-size:27px}.hero h2{margin:0 0 12px;font-size:16px;font-weight:500;direction:ltr;text-align:right}.hero p{margin:0;font-size:15px;opacity:.96}
+form{background:#fff;border:1px solid var(--border);border-radius:22px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.06);margin-top:16px}
+section{padding:22px 26px;border-bottom:1px solid #e6eee4}section:last-child{border-bottom:0}
+.section-title{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:0 0 16px;padding:12px 16px;background:var(--green);color:#fff;border-radius:14px;font-weight:800;font-size:18px}
+.section-title span{font-size:13px;font-weight:500;opacity:.9}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.field,.question{background:var(--soft);border:1px solid var(--border);padding:12px;border-radius:14px}
+label{display:block;font-weight:700;margin-bottom:7px;color:#244b31}
+input[type=text],input[type=email],input[type=tel],input[type=url],input[type=number],input[type=date],select,textarea{width:100%;border:1px solid #b8cdb5;background:#fff;border-radius:10px;padding:10px;font-family:inherit;font-size:14px;outline:none}
+textarea{min-height:82px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(20,107,58,.12)}
+.options{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.option{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #d7e5d5;border-radius:999px;padding:7px 10px;font-weight:600}
+.question{background:#fff;margin:12px 0}.question-head{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start}
+.mark{background:#f2f8ef;color:var(--green);border:1px solid var(--border);border-radius:12px;padding:6px 10px;font-size:13px;font-weight:800;white-space:nowrap}
+.hint{color:var(--muted);font-size:13px;margin:8px 0}
+.checkbox-grid,.files{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
+.check-card,.filebox{display:flex;gap:8px;align-items:flex-start;background:var(--soft);border:1px solid var(--border);border-radius:12px;padding:10px;min-height:52px;font-weight:600}
+.filebox{display:block;border-style:dashed;background:#fbfffa}
+.required{color:var(--danger)}
+.footer-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;background:#f4faf3;padding:24px;border-top:1px solid var(--border)}
+button{border:0;border-radius:12px;padding:12px 20px;font-weight:800;cursor:pointer;font-family:inherit;font-size:15px}
+.primary{background:var(--green);color:#fff}.secondary{background:#eef4ed;color:var(--green);border:1px solid var(--border)}
+.score-box{background:#fff;border:1px solid var(--border);border-radius:16px;padding:14px;margin-top:12px;text-align:center;font-weight:800;color:var(--green)}
+.declaration{background:#fffdf7;border:1px solid #f1d69a;border-radius:16px;padding:14px;color:#4a3310}
+@media(max-width:820px){.grid,.grid3,.files,.checkbox-grid{grid-template-columns:1fr}.question-head{grid-template-columns:1fr}.hero h1{font-size:22px}}
+@media print{body{background:#fff}.page{margin:0;max-width:none}.hero,form{box-shadow:none}.footer-actions{display:none}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="hero">
+    <h1>نموذج طلب تقييم جاهزية الشركات الصغيرة والمتوسطة للتحول الأخضر</h1>
+    <h2>Green Transformation Readiness Application Form for SMEs</h2>
+    <p>نموذج إلكتروني لتعبئة متطلبات الطلب، مع خيارات اختيار واحد وخيارات متعددة، وإمكانية إرفاق الملفات، ثم حفظ البيانات في ملف Excel بحيث تكون كل الحقول على شكل أعمدة.</p>
+  </div>
+
+  <form id="greenForm">
+    <section>
+      <div class="section-title">بيانات الطلب <span>Application Information</span></div>
+      <div class="grid">
+        <div class="field"><label>اسم البرنامج / المبادرة</label><input data-label="اسم البرنامج / المبادرة" name="program" type="text" value="برنامج دعم التحول الأخضر للشركات الصغيرة والمتوسطة"></div>
+        <div class="field"><label>اسم الشركة المتقدمة <span class="required">*</span></label><input required data-label="اسم الشركة المتقدمة" name="company_name" type="text"></div>
+        <div class="field"><label>تاريخ تقديم الطلب</label><input data-label="تاريخ تقديم الطلب" name="application_date" type="date"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">أولًا: معلومات الشركة <span>Company Information</span></div>
+      <div class="grid">
+        <div class="field"><label>الرقم الوطني للمنشأة / الشركة</label><input data-label="الرقم الوطني للمنشأة / الشركة" name="national_no" type="text"></div>
+        <div class="field"><label>رقم السجل التجاري</label><input data-label="رقم السجل التجاري" name="registration_no" type="text"></div>
+        <div class="field"><label>تاريخ وسنة التأسيس</label><input data-label="تاريخ وسنة التأسيس" name="establishment_date" type="text"></div>
+        <div class="field"><label>المحافظة</label><select data-label="المحافظة" name="governorate"><option></option><option>عمان</option><option>إربد</option><option>الزرقاء</option><option>البلقاء</option><option>الكرك</option><option>العقبة</option><option>أخرى</option></select></div>
+        <div class="field"><label>القطاع الرئيسي</label><select data-label="القطاع الرئيسي" name="sector"><option></option><option>الصناعة</option><option>الخدمات</option><option>الزراعة / التصنيع الغذائي</option><option>تكنولوجيا المعلومات</option><option>أخرى</option></select></div>
+        <div class="field"><label>النشاط الفرعي</label><input data-label="النشاط الفرعي" name="sub_activity" type="text"></div>
+        <div class="field"><label>حجم الشركة حسب عدد الموظفين</label><select data-label="حجم الشركة حسب عدد الموظفين" name="size"><option></option><option>1-5</option><option>6-99</option><option>100-249</option><option>أكثر من 249</option></select></div>
+        <div class="field"><label>عدد الموظفين الكلي</label><input data-label="عدد الموظفين الكلي" name="employees_total" type="number" min="0"></div>
+        <div class="field"><label>الموقع الإلكتروني / صفحات التواصل</label><input data-label="الموقع الإلكتروني / صفحات التواصل" name="website" type="url"></div>
+        <div class="field"><label>عنوان الشركة</label><input data-label="عنوان الشركة" name="address" type="text"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">ثانيًا: قائمة الوثائق المطلوبة <span>Required Attachments</span></div>
+      <div class="files">
+        <label class="filebox"><input data-group="الوثائق المطلوبة" type="checkbox" value="السجل التجاري حديث الإصدار"> السجل التجاري حديث الإصدار<br><input data-label="ملف السجل التجاري" type="file"></label>
+        <label class="filebox"><input data-group="الوثائق المطلوبة" type="checkbox" value="رخصة المهن سارية المفعول"> رخصة المهن سارية المفعول<br><input data-label="ملف رخصة المهن" type="file"></label>
+        <label class="filebox"><input data-group="الوثائق المطلوبة" type="checkbox" value="صورة هوية المفوض/المدير العام"> صورة هوية المفوض / المدير العام<br><input data-label="ملف صورة هوية المفوض/المدير العام" type="file"></label>
+        <label class="filebox"><input data-group="الوثائق المطلوبة" type="checkbox" value="شهادة الامتثال الضريبي"> شهادة الامتثال الضريبي<br><input data-label="ملف شهادة الامتثال الضريبي" type="file"></label>
+        <label class="filebox"><input data-group="الوثائق المطلوبة" type="checkbox" value="السياسة البيئية أو سياسة الاستدامة"> السياسة البيئية أو سياسة الاستدامة إن وجدت<br><input data-label="ملف السياسة البيئية أو سياسة الاستدامة" type="file"></label>
+        <label class="filebox"><input data-group="الوثائق المطلوبة" type="checkbox" value="كشف بعدد الموظفين أو شهادة ضمان اجتماعي"> كشف بعدد الموظفين أو شهادة ضمان اجتماعي<br><input data-label="ملف كشف الموظفين أو الضمان الاجتماعي" type="file"></label>
+        <label class="filebox"><input data-group="الوثائق المطلوبة" type="checkbox" value="شهادات جودة أو بيئة"> شهادات جودة أو بيئة مثل ISO 14001 / ISO 50001<br><input data-label="ملف شهادات الجودة أو البيئة" type="file"></label>
+        <label class="filebox"><input data-group="الوثائق المطلوبة" type="checkbox" value="فواتير كهرباء/مياه أو قراءات استهلاك"> فواتير كهرباء / مياه حديثة أو قراءات استهلاك<br><input data-label="ملف فواتير كهرباء/مياه أو قراءات استهلاك" type="file"></label>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">ثالثًا: أسئلة التقييم <span>Readiness Assessment</span></div>
+      <div id="questions"></div>
+    </section>
+
+    <section>
+      <div class="section-title">ممارسات كفاءة الطاقة والإنتاج الأنظف <span>Multiple Selection</span></div>
+      <p class="hint">يرجى اختيار كل ما ينطبق على الشركة.</p>
+      <div class="checkbox-grid">
+        <label class="check-card"><input class="score-check" data-group="ممارسات كفاءة الطاقة والإنتاج الأنظف" data-points="1" type="checkbox" value="تركيب نظام طاقة شمسية"> تركيب نظام طاقة شمسية</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات كفاءة الطاقة والإنتاج الأنظف" data-points="1" type="checkbox" value="استبدال الإضاءة التقليدية بإضاءة LED"> استبدال الإضاءة التقليدية بإضاءة LED</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات كفاءة الطاقة والإنتاج الأنظف" data-points="1" type="checkbox" value="تركيب حساسات حركة"> تركيب حساسات حركة في المناطق قليلة الاستخدام</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات كفاءة الطاقة والإنتاج الأنظف" data-points="1" type="checkbox" value="عزل حراري للمباني"> عزل حراري للمباني لتقليل أحمال التكييف</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات كفاءة الطاقة والإنتاج الأنظف" data-points="1" type="checkbox" value="صيانة دورية للمعدات"> صيانة دورية للمعدات لتجنب الاستهلاك الزائد</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات كفاءة الطاقة والإنتاج الأنظف" data-points="1" type="checkbox" value="استبدال المحركات القديمة بمحركات IE3"> استبدال المحركات القديمة بمحركات IE3 عالية الكفاءة</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات كفاءة الطاقة والإنتاج الأنظف" data-points="1" type="checkbox" value="تحسين العمليات لتقليل استهلاك الطاقة"> تحسين العمليات لتقليل استهلاك الطاقة</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات كفاءة الطاقة والإنتاج الأنظف" data-points="1" type="checkbox" value="استخدام معدات أو خطوط إنتاج عالية الكفاءة"> استخدام معدات أو خطوط إنتاج عالية الكفاءة</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات كفاءة الطاقة والإنتاج الأنظف" data-points="1" type="checkbox" value="تصميم منتجات تتطلب مواد خام أقل"> تصميم منتجات تتطلب مواد خام أقل دون التأثير على الجودة</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات كفاءة الطاقة والإنتاج الأنظف" data-points="1" type="checkbox" value="استخدام تقنيات تقلل المواد الخطرة وتلوث الهواء والمياه"> استخدام تقنيات تقلل المواد الخطرة وتلوث الهواء والمياه</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات كفاءة الطاقة والإنتاج الأنظف" data-points="1" type="checkbox" value="تطبيق مبادئ الاقتصاد الدائري"> تطبيق مبادئ الاقتصاد الدائري في الإنتاج</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات كفاءة الطاقة والإنتاج الأنظف" data-points="1" type="checkbox" value="استخدام مواد تغليف قابلة لإعادة التدوير أو التحلل أو إعادة الاستخدام"> استخدام مواد تغليف قابلة لإعادة التدوير أو التحلل أو إعادة الاستخدام</label>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">ممارسات ترشيد المياه والموارد <span>Water & Resources Practices</span></div>
+      <div class="checkbox-grid">
+        <label class="check-card"><input class="score-check" data-group="ممارسات ترشيد المياه والموارد" data-points="1" type="checkbox" value="تركيب صنابير وأدوات ترشيد المياه"> تركيب صنابير وأدوات ترشيد المياه</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات ترشيد المياه والموارد" data-points="1" type="checkbox" value="تركيب محطة تنقية مياه"> تركيب محطة تنقية مياه</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات ترشيد المياه والموارد" data-points="1" type="checkbox" value="إعادة استخدام مياه التنظيف"> إعادة استخدام مياه التنظيف في عمليات غير حساسة</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات ترشيد المياه والموارد" data-points="1" type="checkbox" value="جمع مياه الأمطار"> جمع مياه الأمطار واستخدامها في الري أو التنظيف الخارجي</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات ترشيد المياه والموارد" data-points="1" type="checkbox" value="معالجة مياه الصرف الصناعي وإعادة تدويرها"> معالجة مياه الصرف الصناعي وإعادة تدويرها جزئيًا</label>
+        <label class="check-card"><input class="score-check" data-group="ممارسات ترشيد المياه والموارد" data-points="1" type="checkbox" value="استبدال الغسيل المائي بتقنيات جافة"> استبدال عمليات الغسيل المائي بتقنيات جافة حيثما أمكن</label>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">وصف احتياج التحول الأخضر <span>Green Transformation Need</span></div>
+      <div class="grid">
+        <div class="field"><label>ما المشكلة البيئية أو التشغيلية التي ترغب الشركة بمعالجتها؟</label><textarea data-label="المشكلة البيئية أو التشغيلية" name="problem"></textarea></div>
+        <div class="field"><label>ما الإجراء / المشروع المقترح للتحول الأخضر؟</label><textarea data-label="الإجراء / المشروع المقترح للتحول الأخضر" name="project"></textarea></div>
+      </div>
+      <div class="field" style="margin-top:12px">
+        <label>نوع الدعم المطلوب</label>
+        <div class="checkbox-grid">
+          <label class="check-card"><input class="score-check" data-group="نوع الدعم المطلوب" data-points="1" type="checkbox" value="دعم فني"> دعم فني</label>
+          <label class="check-card"><input class="score-check" data-group="نوع الدعم المطلوب" data-points="1" type="checkbox" value="تدريب وبناء قدرات"> تدريب وبناء قدرات</label>
+          <label class="check-card"><input class="score-check" data-group="نوع الدعم المطلوب" data-points="1" type="checkbox" value="تدقيق طاقة / مياه"> تدقيق طاقة / مياه</label>
+          <label class="check-card"><input class="score-check" data-group="نوع الدعم المطلوب" data-points="1" type="checkbox" value="ربط بخبراء"> ربط بخبراء</label>
+          <label class="check-card"><input class="score-check" data-group="نوع الدعم المطلوب" data-points="1" type="checkbox" value="تمويل / منحة"> تمويل / منحة</label>
+          <label class="check-card"><input class="score-check" data-group="نوع الدعم المطلوب" data-points="1" type="checkbox" value="ربط بأسواق"> ربط بأسواق</label>
+        </div>
+      </div>
+      <div class="field" style="margin-top:12px">
+        <label>الأثر المتوقع</label>
+        <div class="checkbox-grid">
+          <label class="check-card"><input class="score-check expected-impact" data-group="الأثر المتوقع" data-points="1" type="checkbox" value="خفض الطاقة"> خفض الطاقة</label>
+          <label class="check-card"><input class="score-check expected-impact" data-group="الأثر المتوقع" data-points="1" type="checkbox" value="خفض المياه"> خفض المياه</label>
+          <label class="check-card"><input class="score-check expected-impact" data-group="الأثر المتوقع" data-points="1" type="checkbox" value="تقليل النفايات"> تقليل النفايات</label>
+          <label class="check-card"><input class="score-check expected-impact" data-group="الأثر المتوقع" data-points="1" type="checkbox" value="خفض الانبعاثات"> خفض الانبعاثات</label>
+          <label class="check-card"><input class="score-check expected-impact" data-group="الأثر المتوقع" data-points="1" type="checkbox" value="تحسين الامتثال"> تحسين الامتثال</label>
+          <label class="check-card"><input class="score-check expected-impact" data-group="الأثر المتوقع" data-points="1" type="checkbox" value="رفع التنافسية"> رفع التنافسية</label>
+        </div>
+      </div>
+      <div class="grid" style="margin-top:12px">
+        <div class="field"><label>الكلفة التقديرية للمشروع - إن وجدت</label><input data-label="الكلفة التقديرية للمشروع" name="estimated_cost" type="text"></div>
+        <div class="field"><label>مدة التنفيذ المتوقعة</label>
+          <div class="options">
+            <label class="option"><input class="score-radio" data-label="مدة التنفيذ المتوقعة" data-points="1" type="radio" name="duration" value="أقل من 3 أشهر"> أقل من 3 أشهر</label>
+            <label class="option"><input data-label="مدة التنفيذ المتوقعة" type="radio" name="duration" value="3-6 أشهر"> 3-6 أشهر</label>
+            <label class="option"><input data-label="مدة التنفيذ المتوقعة" type="radio" name="duration" value="6-12 شهرًا"> 6-12 شهرًا</label>
+            <label class="option"><input data-label="مدة التنفيذ المتوقعة" type="radio" name="duration" value="أكثر من سنة"> أكثر من سنة</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">الإقرار والتعهد <span>Declaration</span></div>
+      <div class="declaration">أقر أنا الموقع أدناه بأن جميع المعلومات الواردة في هذا الطلب صحيحة ودقيقة حسب علمي، وأوافق على قيام الجهة المختصة بمراجعة البيانات والوثائق وطلب أي معلومات إضافية لأغراض التقييم والمتابعة.</div>
+      <div class="grid" style="margin-top:12px">
+        <div class="field"><label>اسم المفوض بالتوقيع</label><input data-label="اسم المفوض بالتوقيع" name="signer_name" type="text"></div>
+        <div class="field"><label>الصفة الوظيفية</label><input data-label="الصفة الوظيفية" name="signer_title" type="text"></div>
+        <div class="field"><label>التوقيع</label><input data-label="التوقيع" name="signature" type="text"></div>
+        <div class="field"><label>الختم الرسمي للشركة</label><input data-label="الختم الرسمي للشركة" name="stamp" type="text"></div>
+        <div class="field"><label>التاريخ</label><input data-label="تاريخ الإقرار والتعهد" name="sign_date" type="date"></div>
+      </div>
+      <div class="score-box">إجمالي النقاط المحسوبة تلقائيًا: <span id="score">0</span> / 90 — مستوى الجاهزية: <span id="level">مبتدئ</span></div>
+    </section>
+
+    <div class="footer-actions">
+      <button class="primary" type="button" onclick="submitToExcel()">Submit / إرسال وحفظ Excel</button>
+      <button class="secondary" type="button" onclick="window.print()">طباعة / حفظ PDF</button>
+    </div>
+  </form>
+</div>
+
+<script>
+const questions = [
+  {n:1,s:"المحور الرابع: السياسات والإدارة البيئية",q:"هل تمتلك الشركة سياسة بيئية مكتوبة ومعتمدة؟",o:["نعم","لا"],p:2,t:true,f:true,h:"إذا كانت الإجابة نعم، يرجى إرفاق نسخة."},
+  {n:2,s:"المحور الرابع: السياسات والإدارة البيئية",q:"هل توجد أهداف بيئية محددة وقابلة للقياس للشركة؟",o:["نعم","لا"],p:3,t:true,h:"اذكر أهم الأهداف."},
+  {n:3,s:"المحور الرابع: السياسات والإدارة البيئية",q:"هل يتم مراجعة الأداء البيئي للشركة بانتظام؟",o:["نعم","لا","جزئيًا"],p:2,t:true,h:"دورية المراجعة: شهرية / ربع سنوية / سنوية."},
+  {n:4,s:"المحور الرابع: السياسات والإدارة البيئية",q:"هل يوجد مسؤول أو فريق مخصص للإشراف على الممارسات البيئية؟",o:["نعم","لا"],p:2,t:true,h:"اسم المسؤول / الفريق."},
+  {n:7,s:"المحور الخامس: البصمة الكربونية والانبعاثات",q:"هل تقوم الشركة بقياس أو مراقبة انبعاثات الغازات الدفيئة مثل ثاني أكسيد الكربون؟",o:["نعم","لا","جزئيًا"],p:2,t:false,h:"تم حذف الحقل النصي حسب المطلوب."},
+  {n:8,s:"المحور الخامس: البصمة الكربونية والانبعاثات",q:"هل لدى الشركة أهداف أو خطة لخفض البصمة الكربونية؟",o:["نعم","لا","قيد الدراسة"],p:2,t:true,f:true,h:"اذكر الهدف/الخطة، ويمكن إرفاق ملف داعم."},
+  {n:9,s:"المحور الخامس: البصمة الكربونية والانبعاثات",q:"هل تستخدم الشركة مصادر طاقة متجددة مثل الطاقة الشمسية؟",o:["نعم","لا","جزئيًا"],p:2,t:true,h:"نسبة المساهمة التقريبية."},
+  {n:10,s:"المحور الخامس: البصمة الكربونية والانبعاثات",q:"هل يتم التحكم في تلوث الهواء أو الماء الناتج عن العمليات الصناعية؟",o:["نعم","لا","لا ينطبق"],p:2,t:true,h:"يرجى توضيح الإجراءات الحالية."},
+  {n:11,s:"المحور السادس: استهلاك الطاقة وكفاءة الطاقة",q:"هل تقوم الشركة بمراقبة استهلاك الطاقة بانتظام؟",o:["نعم","لا"],p:2,t:false,h:"تم حذف الحقل النصي حسب المطلوب."},
+  {n:12,s:"المحور السادس: استهلاك الطاقة وكفاءة الطاقة",q:"هل نفذت الشركة إجراءات لتحسين كفاءة الطاقة؟",o:["نعم","لا","بعض الإجراءات"],p:3,t:true,h:"مثال: LED، عزل، صيانة معدات."},
+  {n:13,s:"المحور السادس: استهلاك الطاقة وكفاءة الطاقة",q:"ما نسبة الطاقة المتجددة من إجمالي استهلاك الطاقة؟",o:["0-25%","26-50%","51-75%","76-100%"],p:3,t:false,h:"تم حذف الحقل النصي حسب المطلوب."},
+  {n:14,s:"المحور الثامن: إدارة النفايات",q:"هل لدى الشركة برنامج لإدارة النفايات مثل الفرز أو إعادة التدوير؟",o:["نعم","لا","جزئيًا"],p:3,t:true,h:"مطلوب توضيح حقل نصي."},
+  {n:16,s:"المحور الثامن: إدارة النفايات",q:"هل توجد خطة لتقليل توليد النفايات في العمليات؟",o:["نعم","لا","قيد الدراسة"],p:3,t:true,h:"أرفق الخطة إن وجدت."},
+  {n:17,s:"المحور الثامن: إدارة النفايات",q:"هل يتم التخلص من النفايات الخطرة بطريقة آمنة بيئيًا وفق اللوائح؟",o:["نعم","لا","لا ينطبق"],p:3,t:true,h:"اسم الجهة المعتمدة إن وجدت."},
+  {n:18,s:"المحور التاسع: استخدام الموارد والمياه",q:"هل تقوم الشركة بمراقبة استهلاك المياه؟",o:["نعم","لا"],p:1,t:false,h:"تم حذف الحقل النصي حسب المطلوب."},
+  {n:19,s:"المحور التاسع: استخدام الموارد والمياه",q:"هل نفذت الشركة إجراءات لتقليل استهلاك المياه؟",o:["نعم","لا","بعض الإجراءات"],p:2,t:true,h:"اذكر الإجراءات."},
+  {n:20,s:"المحور التاسع: استخدام الموارد والمياه",q:"هل تستخدم الشركة مواد خام مستدامة أو معاد تدويرها في المنتجات/الخدمات؟",o:["نعم","لا","جزئيًا"],p:6,t:true,h:"حدد نوع المواد."},
+  {n:21,s:"المحور الحادي عشر: دورة حياة المنتج/الخدمة",q:"للقطاع الصناعي: هل تأخذ الشركة الأثر البيئي للمنتج خلال دورة حياته من التصميم إلى التخلص؟",o:["نعم","لا","جزئيًا","لا ينطبق"],p:3,t:true,h:"توضيح."},
+  {n:22,s:"المحور الحادي عشر: دورة حياة المنتج/الخدمة",q:"لقطاع الخدمات: هل تقدم الشركة خدمات صديقة للبيئة أو تقلل الأثر البيئي مثل الخدمات الرقمية أو الاستشارات الخضراء؟",o:["نعم","لا","جزئيًا","لا ينطبق"],p:3,t:true,h:"توضيح."},
+  {n:23,s:"المحور الثاني عشر: سلاسل التوريد المستدامة",q:"هل تضع الشركة معايير استدامة عند اختيار الموردين؟",o:["نعم","لا","جزئيًا"],p:2,t:true,h:"اذكر المعايير إن وجدت."},
+  {n:25,s:"المحور الثاني عشر: سلاسل التوريد المستدامة",q:"هل تفضل الشركة موردين محليين أو معتمدين بيئيًا عند الإمكان؟",o:["نعم","لا","جزئيًا"],p:2,t:true,h:"توضيح."},
+  {n:26,s:"المحور الثالث عشر: الأخلاقيات والامتثال والحوكمة",q:"هل لدى الشركة مدونة سلوك أو سياسة أخلاقية واضحة؟",o:["نعم","لا"],p:1,t:true,f:true,h:"يرجى إرفاقها إن وجدت."},
+  {n:27,s:"المحور الثالث عشر: الأخلاقيات والامتثال والحوكمة",q:"هل توفر الشركة تدريبات للموظفين حول الأخلاقيات ومكافحة الفساد؟",o:["نعم","لا","قيد الدراسة"],p:1,t:false,h:"تم حذف الحقل النصي حسب المطلوب."},
+  {n:28,s:"المحور الثالث عشر: الأخلاقيات والامتثال والحوكمة",q:"هل لدى الشركة آلية لتلقي الشكاوى أو الملاحظات من الموظفين/المتعاملين؟",o:["نعم","لا","جزئيًا"],p:1,t:false,h:"تم حذف الحقل النصي حسب المطلوب."},
+  {n:29,s:"المحور الثالث عشر: الأخلاقيات والامتثال والحوكمة",q:"هل تتبع الشركة إجراءات صحة وسلامة مهنية موثقة؟",o:["نعم","لا","جزئيًا"],p:1,t:true,f:true,h:"توضيح، ويمكن إرفاق ملف داعم."}
+];
+
+const container = document.getElementById("questions");
+let currentSection = "";
+questions.forEach((q)=>{
+  if(q.s !== currentSection){
+    const title = document.createElement("div");
+    title.className = "section-title";
+    title.style.marginTop = currentSection ? "24px" : "0";
+    title.innerHTML = q.s;
+    container.appendChild(title);
+    currentSection = q.s;
+  }
+  const div = document.createElement("div");
+  div.className = "question";
+  const options = q.o.map(opt=>{
+    let points = 0;
+    if(opt === "نعم") points = q.p;
+    if(q.n === 13 && (opt === "51-75%" || opt === "76-100%")) points = q.p;
+    return `<label class="option"><input class="score-radio" data-label="س${q.n}: ${q.q}" data-points="${points}" type="radio" name="q${q.n}" value="${opt}"> ${opt}</label>`;
+  }).join("");
+  const textarea = q.t ? `<textarea data-label="س${q.n} - توضيح" name="q${q.n}_details" placeholder="يرجى كتابة التوضيح المطلوب..."></textarea>` : "";
+  const file = q.f ? `<div class="hint">إرفاق ملف داعم:</div><input data-label="س${q.n} - ملف مرفق" type="file" name="q${q.n}_file">` : "";
+  div.innerHTML = `
+    <div class="question-head">
+      <div><label>س${q.n}. ${q.q}</label><div class="options">${options}</div></div>
+      <div class="mark">${q.p} نقاط عند تحقق الشرط</div>
+    </div>
+    <div class="hint">${q.h}</div>
+    ${textarea}
+    ${file}
+  `;
+  container.appendChild(div);
+});
+
+function calculateScore(){
+  let total = 0;
+  document.querySelectorAll(".score-radio:checked").forEach(el=> total += Number(el.dataset.points || 0));
+  document.querySelectorAll(".score-check:checked").forEach(el=> total += Number(el.dataset.points || 0));
+  if(total > 90) total = 90;
+  let level = total <= 30 ? "مبتدئ" : total <= 60 ? "متطور" : "رائد";
+  document.getElementById("score").textContent = total;
+  document.getElementById("level").textContent = level;
+}
+document.addEventListener("change", calculateScore);
+calculateScore();
+
+function collectForExcel(){
+  const data = {};
+  const add = (label, value) => {
+    if(!label) return;
+    if(data[label]){
+      data[label] = data[label] ? data[label] + " | " + value : value;
+    } else data[label] = value || "";
+  };
+
+  document.querySelectorAll("input, select, textarea").forEach(el=>{
+    const type = (el.type || "").toLowerCase();
+    if(type === "button" || type === "submit") return;
+
+    if(type === "radio"){
+      if(el.checked) add(el.dataset.label, el.value);
+      return;
+    }
+
+    if(type === "checkbox"){
+      const group = el.dataset.group || el.dataset.label;
+      if(el.checked) add(group, el.value || "نعم");
+      return;
+    }
+
+    if(type === "file"){
+      const files = Array.from(el.files || []).map(f=>f.name).join(", ");
+      add(el.dataset.label, files);
+      return;
+    }
+
+    add(el.dataset.label || el.name, el.value);
+  });
+
+  add("إجمالي النقاط", document.getElementById("score").textContent);
+  add("مستوى الجاهزية", document.getElementById("level").textContent);
+  add("تاريخ ووقت الإرسال", new Date().toLocaleString("ar-JO"));
+  return data;
+}
+
+function escapeHtml(value){
+  return String(value ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+async function submitToExcel(){
+  const form = document.getElementById("greenForm");
+  if(!form.checkValidity()){
+    alert("يرجى تعبئة الحقول الإلزامية قبل الإرسال.");
+    form.reportValidity();
+    return;
+  }
+  calculateScore();
+  const data = collectForExcel();
+  const headers = Object.keys(data);
+  const row = headers.map(h=>data[h]);
+
+  const table = `
+  <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel">
+  <head><meta charset="UTF-8">
+  <!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Green Application</x:Name><x:WorksheetOptions><x:DisplayRightToLeft/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->
+  <style>
+    table{border-collapse:collapse;font-family:Tahoma,Arial}
+    th{background:#146b3a;color:white;font-weight:bold;border:1px solid #999;padding:8px;white-space:nowrap}
+    td{border:1px solid #999;padding:8px;vertical-align:top;white-space:pre-wrap}
+  </style></head><body><table dir="rtl">
+  <tr>${headers.map(h=>`<th>${escapeHtml(h)}</th>`).join("")}</tr>
+  <tr>${row.map(v=>`<td>${escapeHtml(v)}</td>`).join("")}</tr>
+  </table></body></html>`;
+
+  const blob = new Blob(["\ufeff", table], {type:"application/vnd.ms-excel;charset=utf-8"});
+  const suggestedName = "green_transformation_application.xls";
+
+  if(window.showSaveFilePicker){
+    try{
+      const handle = await window.showSaveFilePicker({
+        suggestedName,
+        types:[{description:"Excel File", accept:{"application/vnd.ms-excel":[".xls"]}}]
+      });
+      const writable = await handle.createWritable();
+      await writable.write(blob);
+      await writable.close();
+      alert("تم حفظ ملف Excel بنجاح. تم تخزين البيانات في أعمدة.");
+      return;
+    } catch(e){
+      if(e && e.name === "AbortError") return;
+    }
+  }
+
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = suggestedName;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  alert("تم تنزيل ملف Excel. إذا أردت حفظه على سطح المكتب اختر Desktop عند الحفظ أو انقله من مجلد Downloads.");
+}
+</script>
+</body>
+</html>
